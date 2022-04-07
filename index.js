@@ -2,7 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generateHTML = require('./src/generateHTML');
-// const path = require('path');
+const path = require('path');
 
 // create questions array
 const questions = [
@@ -32,7 +32,7 @@ function init() {
     inquirer.prompt(questions)
         .then((answer) => {
             console.log(answer)
-            writeToFile('/dist/index.html', generateHTML(answer))
+            writeToFile('./dist/index.html', generateHTML(answer))
         })
 }
 
