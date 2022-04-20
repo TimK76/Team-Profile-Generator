@@ -36,7 +36,7 @@ THEN I exit the application, and the HTML is generated"
 
 ## Github: [TimK76](https://github.com/TimK76/Team-Profile-Generator)
 
-## Walkthrough: [Video](https://drive.google.com/file/d/1j3Dki9dWTwuz7Xf66vHwXb12a-wG4Re_/view)
+## Walkthrough: [Video](https://drive.google.com/file/d/1bJ-ekIeccg2h4TMybYAKBARMj6iJc6Wq/view)
 ## Credit
 Thanks to my awesome tutor Juan Delgado and my Instructor/TAs, and ASKBCS for all of their help - I was sick the week of this challenge and missed class so their help was very much needed and appreciated. 
 
