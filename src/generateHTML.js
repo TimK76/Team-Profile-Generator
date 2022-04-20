@@ -4,7 +4,7 @@ function generateCard(answer) {
     p = `    <p class="card-text my-0 p-2 bg-white border">Office Number: ${answer.officeNumber}</p>
     `;
   } else if (answer.getRole() === "Engineer") {
-    p = `     <p class="card-text my-0 p-2 bg-white border">GitHub: ${answer.github}</p>
+    p = `     <p class="card-text my-0 p-2 bg-white border"><a href="https://github.com/${answer.github}" target="_blank">GitHub: ${answer.github}</a></p>
     `;
   } else {
     p = `    <p class="card-text my-0 p-2 bg-white border">School: ${answer.school}</p>
