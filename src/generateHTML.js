@@ -1,5 +1,36 @@
+function generateCard(answer) {
+  var p = "";
+  if (answer.getRole() === "Manager") {
+    p = `    <p class="card-text my-0 p-2 bg-white border">Office Number: ${answer.officeNumber}</p>
+    `;
+  } else if (answer.getRole() === "Engineer") {
+    p = `    <p class="card-text my-0 p-2 bg-white border">GitHub: ${answer.github}</p>
+    `;
+  } else {
+    p = `    <p class="card-text my-0 p-2 bg-white border">School: ${answer.school}</p>
+    `;
+  }
+  return `
+  <div class="shadow-lg card" style="width: 18rem;">
+  <div class="card-body bg-primary text-white">
+    <h5 class="card-title">${answer.name}</h5>
+    <h5 class="card-role">${answer.getRole}</h5>
+  </div>
+  <div class="p-4 bg-light">
+    <p class="card-text my-0 p-2 bg-white border">ID: ${answer.id}</p>
+    <a href="mailto:${answer.email} class="card-text my-0 p-2 bg-white border">Email: ${answer.email}</a>
+    ${p}
+    </div>
+</div>
+`;
+}
+
 function generateHTML(data) {
-    return `
+  var card = "";
+  for (var i = 0; i < data.length; i++) {
+    card += generateCard(data[i]);
+  }
+  return `
     
     <!DOCTYPE html>
 <html lang="en">
@@ -15,24 +46,14 @@ function generateHTML(data) {
     <h1 class= "py-4 bg-danger text-white text-center font-weight-bolder"> My Team</h1> 
 </header>
 <main class="d-flex flex-wrap justify-content-around">
-<div class="shadow-lg card" style="width: 18rem;">
-  <div class=" card-body bg-primary text-white">
-    <h5 class="card-title">${name}</h5>
-    <h5 class="card-role">${role}</h5>
-  </div>
-  <div class="p-4 bg-light">
-    <p class="card-text my-0 p-2 bg-white border">ID: ${id}</p>
-    <a href="mailto:${email} class="card-text my-0 p-2 bg-white border">Email: ${email}</a>
-    <p class="card-text my-0 p-2 bg-white border">Office Number: ${officeNumber}</p>
-  </div>
-</div>
+${card}
 </main>
 
     
 </body>
 </html>
     
-    `
+    `;
 }
 
 module.exports = { generateHTML };
