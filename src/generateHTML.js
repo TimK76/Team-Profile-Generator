@@ -4,7 +4,7 @@ function generateCard(answer) {
     p = `    <p class="card-text my-0 p-2 bg-white border">Office Number: ${answer.officeNumber}</p>
     `;
   } else if (answer.getRole() === "Engineer") {
-    p = `    <p class="card-text my-0 p-2 bg-white border">GitHub: ${answer.github}</p>
+    p = `     <p class="card-text my-0 p-2 bg-white border">GitHub: ${answer.github}</p>
     `;
   } else {
     p = `    <p class="card-text my-0 p-2 bg-white border">School: ${answer.school}</p>
@@ -12,16 +12,16 @@ function generateCard(answer) {
   }
   return `
   <div class="shadow-lg card" style="width: 18rem;">
-  <div class="card-body bg-primary text-white">
-    <h5 class="card-title">${answer.name}</h5>
-    <h5 class="card-role">${answer.getRole}</h5>
-  </div>
-  <div class="p-4 bg-light">
-    <p class="card-text my-0 p-2 bg-white border">ID: ${answer.id}</p>
-    <a href="mailto:${answer.email} class="card-text my-0 p-2 bg-white border">Email: ${answer.email}</a>
-    ${p}
+    <div class="card-body bg-primary text-white">
+      <h5 class="card-title">${answer.name}</h5>
+      <h5 class="card-role">${answer.getRole()}</h5>
     </div>
-</div>
+    <div class="p-4 bg-light">
+      <p class="card-text my-0 p-2 bg-white border">ID: ${answer.id}</p>
+      <a href="mailto:${answer.email} class="card-text my-0 p-2 bg-white border">Email: ${answer.email}</a>
+      <div>${p}</div>
+    </div>
+  </div>
 `;
 }
 
