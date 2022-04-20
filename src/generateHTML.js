@@ -18,7 +18,9 @@ function generateCard(answer) {
     </div>
     <div class="p-4 bg-light">
       <p class="card-text my-0 p-2 bg-white border">ID: ${answer.id}</p>
-      <a href="mailto:${answer.email} class="card-text my-0 p-2 bg-white border">Email: ${answer.email}</a>
+      <a href="mailto:${
+        answer.email
+      } class="card-text my-0 p-2 bg-white border">Email: ${answer.email}</a>
       <div>${p}</div>
     </div>
   </div>
